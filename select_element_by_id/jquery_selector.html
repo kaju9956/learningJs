@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 class="intro">heading 1</h2>
+    <div id="div1">
+        <p class="intro">paragraph 1</p>
+        <h2 class="intro">heading 2</h2>
+        <p class="intro">paragraph 2</p>
+        <h2>heading 3</h2>
+        <p class="intro">paragraph 3</p>
+    </div>
+    <script>
+        //isme humlog css mai aise select kr sakte hai jise humlog css mai krte hai
+        //hume div k andar aisa p tag select krna hai jisme (class = intro ) ho 
+        let elm = document.querySelector('p.intro')//jise humlog css mai select krte hai p
+        console.log(elm)// it will select only one p element that is why for loop is not working here
+        elm.innerHTML = "heyy";// and it will work on only one p tag
+        //but we want all of our p tag to get select
+        //when we use (querySelector) then it will select jo pehla condition satisfy krte hue milega usi ko wo select karega to ye
+        //<p class="intro">paragraph 1</p> ko select kr lega to ye function sirf pehla element select krta hai
+        
+        for (let i=0; i<elm.length;i++){
+            elm[i].innerHTML = 'heyy';
+        }// aisa krne se koi changes nahi hua
+
+        //if you want to select all p element with class intro
+        let ele = document.querySelectorAll('p.intro');
+        // ele.innerHTML = 'HELLO';
+        console.log(ele)
+        for (let i=0; i<ele.length;i++){
+            ele[i].innerHTML = 'hello';
+        }
+
+
+    </script>
+</body>
+</html>

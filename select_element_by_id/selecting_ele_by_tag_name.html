@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- now we will select multiple elements by using tagname <p>,<h> -->
+        <ul>
+            <li>list1</li>
+            <li>list2</li>
+            <li>list3</li>
+        </ul>
+        <h2>heading 1</h2>
+        <p>paragraph 1</p>
+
+        <div id="div1">
+        <h2>heading 2</h2>
+        <p>paragraph 2</p>
+        
+        <h2>heaidng 3</h2>
+        <p>paragraph 3</p>
+        </div>
+        <!-- now we want to select and make some changes in all 3 paragraphs -->
+        <script>
+            let elm = document.getElementsByTagName('h2');
+
+            for(let i=0; i < elm.length; i++){
+                elm[i].innerHTML = "hello";
+            }
+            // now ab hume div k andar jo h2 sirf unlo change krna hai to kaise karenge
+            
+            let div1 = document.getElementById('div1');
+            let ele = div1.getElementsByTagName('h2')//hume document mai joo div hai sirf usko select krna hai
+
+            for(let j = 0; j<ele.length; j++){
+                ele[j].innerHTML = "hii";
+            }
+
+
+
+
+        </script>
+</body>
+</html>

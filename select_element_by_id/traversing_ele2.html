@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- here we will move form parent to child -->
+    <ul id="first">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul>
+
+    <ul>
+        <li>list a</li>
+        <li>list b</li>
+        <li>list c</li>
+        <li>list d</li>
+    </ul>
+    <script>
+        let ele = document.getElementById('first');
+        console.log(ele)
+        //now we want to move to the child
+        //let child = ele.firstElementChild;//it's a property and not a method
+        //console.log(child)
+        //now we want to select all child
+        let allchild = ele.children;
+        console.log(allchild);
+        for (let i=0; i<allchild.length;i++){
+            allchild[i].innerHTML = 'hello';
+        }
+    </script>
+
+</body>
+</html>

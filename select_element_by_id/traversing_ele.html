@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- here we have to select first div if we will use getelementbyid or classname or queryselector
+    par yaha pr do div hai aur hame sirf first wale div to select krna hai to kya karenge -->
+    <!-- to travers mai kya hota hai humog ek element se doosre element mai chale jaaye -->
+    <!-- yaha humlog p ko select krte hai jiske id div1 hai -->
+    <!-- humlog iske id se iske parent ko select kr sakte hai -->
+    <!-- traverse se humlog ek element se doosre ele mai jaa skate hai
+  -->
+  <!-- ho skata hai children pr jaaye ya sibling pe jaaye ye(indirect-selection) hota hai-->
+    <h2>heading 1</h2>
+    <div>
+        <p id="div1">paragraph 1</p>
+        <p>paragraph 2</p>
+        <p>paragraph 3</p>
+        <p>paragraph 4</p>
+    </div>
+    <div>
+
+    </div>
+
+    <!-- we can take another exple -->
+    <ul><!--hum log ko ye ul select krna hai with the help of this (id=intro)-->
+        <li  id="intro">list 1</li>
+        <li>list 2</li>
+        <li>list 3</li>
+        <li>list 4</li>
+    </ul>
+    <ul>
+        <li>list a</li>
+        <li>list b</li>
+        <li>list c</li>
+        <li>list d</li>
+    </ul>
+    <script>
+        let ele = document.getElementById('intro');
+        console.log(ele);
+        //here we'll use parent selector of this id
+        let prt = ele.parentElement;// this ele holds (<li  id="intro">list 1</li>) 
+        //aur is ka parent hai ul uar (prt mai iska parent select hogaya)
+        console.log(prt)
+        //now we will make changes in parent element
+        prt.innerHTML = 'hELLO';
+    </script>
+</body>
+</html>

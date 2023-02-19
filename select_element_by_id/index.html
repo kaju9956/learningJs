@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>list 1</li>
+        <li id="first">
+            list 2
+        </li><!--now we have list 2 we want to make changes in it through javascript
+        by using id, if you want to select only one element-->
+        <li>list 3</li>
+    </ul>
+    <script >
+        let elm = document.getElementById('first')// here the elm variable storing that <li id="first">list 2</li>
+        //console.log(elm);// if we will that id which does not exist then it will give us null
+        // elm stores that ele as object so we can apply properties and method on that as well
+        console.log(elm.innerHTML);// it stores 'list 1' text
+        // it is the method is getting value
+
+
+        // now we will set the value and for this we will do this
+        elm.innerHTML = "<p> hello </p>";
+    </script>
+</body>
+
+</script>
+</html>
